@@ -1,0 +1,37 @@
+@import './base.css';
+
+body {
+  /* padding-top: 70px; */ /* Sticky nav bar height - removed to eliminate extra gap */
+}
+
+#app {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+main {
+  padding: 0;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  #app {
+    display: grid;
+    /* The navbar is a direct child of #app, so we need 2 rows */
+    grid-template-rows: auto 1fr; 
+  }
+}
